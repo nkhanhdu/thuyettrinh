@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pretestform</title>
+    <script src="js/pretest1.js"></script>
+</head>
+<body>
+    
+    <style>
+        table{
+            border: solid;
+            margin: auto;
+        }
+
+
+        input:required{
+            border: solid red;
+        } 
+
+        nav{
+            display: flex;
+            justify-content: space-around;
+            
+        }
+
+        nav a{
+            text-decoration: none;
+            color: blue;
+            text-shadow: gray;
+            font-weight: bold;
+        }
+    </style>
+    <h2 style="background-color: green; color: white" align="center">Online Shopee</h2>
+    <hr>
+    <nav>
+        <a href="/Pretest111.html" class="active">HOME</a>
+        <a href="">PRODUCTS</a>
+        <a href="">SHOP</a>
+        <a href="">REGISTER</a>
+        <a href="pretest1.html">SIGNIN</a>
+    </nav>
+    <hr>
+    <section>
+    <form onsubmit="showInfo()">
+    <table>
+        <tr>
+        <td align="center" style="background-color: green; color: white"  colspan="2">Member Information</td>
+        </tr>
+        <tr>
+            <td>Full Name</td>
+            <td><input type="text" id="username" autofocus required></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>
+                <input type="radio" name="gender" class="gender" value="Male">Male
+                <input type="radio" name="gender" class="gender" value="Female">Female
+            </td>
+        </tr>
+        <tr>
+            <td>Hobbies</td>
+            <td>
+                <input type="checkbox" name="hob" class="hob" value="Shopping">Shopping
+                <input type="checkbox" name="hob" class="hob" value="Eating Out">Eating Out
+                <input type="checkbox" name="hob" class="hob" value="Sporting">Sporting
+            </td>
+        </tr>
+        <tr>
+            <td>Date of Birth</td>
+            <td><input type="date" id="birthday"></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><input type="text" id="address" autofocus required></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" id="email" autofocus required></td>
+        </tr>
+        <tr>
+            <td>Phone Number</td>
+            <td><input type="text" id="phone" autofocus required pattern="[0-9]+"></td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>
+                <select name="city" id="cities">
+                    <option>---Select---</option>
+                    <option>Saigon</option>
+                    <option>Hue</option>
+                    <option>Hanoi</option>
+                    <option>Danang</option>
+                 </select> 
+            </td>
+        </tr>
+        <tr>
+            <td>Comment</td>
+            <td>
+                <textarea name="" id="com" cols="22" rows="3"></textarea>
+            </td>
+        </tr>
+
+        <tr align="center">
+            <td colspan="2"><input type="submit"><input type="reset">
+            </td>
+        </tr>
+    </table>
+    </form>
+    </section>
+    <footer>
+        <p align="center">Shopee Copyright 2017.All rights reserved</p>
+    </footer>
+</body>
+</html>
