@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        html,body{
+            margin: 0;
+        }
+        #info{
+            width: 255px;
+            height: 100px;
+            border: solid;
+        }
+    </style>
+    <script src="js/pretest1.js"></script>
+</head>
+<body>
+    <form onsubmit="showInfo()">
+        <table>
+            <tr>
+                <td>Full name</td>
+                <td><input type="text" style="color: blue;" id="username"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="gender" class="gender" value="Male">Male
+                    <input type="radio" name="gender" class="gender" value="Female">Female
+                </td>
+            </tr>
+            <tr>
+                <td>Hobby</td>
+                <td>
+                    <input type="checkbox" name="hob" class="hob" value="Shoping">Shopping
+                    <input type="checkbox" name="hob" class="hob" value="Eating out">Eating out
+                    <input type="checkbox" name="hob" class="hob" value="Sporting">Sporting
+                </td>
+            </tr>
+            <tr>
+                <td>Date of birth</td>
+                <td><input type="date" id="birthday"></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><input type="text" id="address"></td>
+            </tr>
+            <tr>
+                <td>Emaiil</td>
+                <td><input type="text" id="email"></td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td><input type="number" id="phoneNumber"></td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td>
+                    <select name="city" id="cities">
+                        <option>---Select---</option>
+                        <option>HCM</option>
+                        <option>Tây Ninh</option>
+                        <option>Binh Duong</option>
+                        <option>Lâm Đồng</option>
+                     </select> 
+                </td>
+            </tr>
+            
+        </table>
+    </form>
+    <div id="info">
+
+    </div>
+    <input type="submit">
+    <input type="reset">
+</body>
+</html>
