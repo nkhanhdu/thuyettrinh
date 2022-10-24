@@ -1,0 +1,21 @@
+header{
+   height: 40px;
+   background-color: green;
+   margin: 0px;
+   color: white;
+   font-size: 30px;
+}
+nav{
+   color: blue;
+   margin: 30px;
+   display: flex;
+   justify-content: space-around;
+}
+nav a{
+   text-decoration: none;
+   font-weight: bold;
+   color: blue;
+}
+body img{
+   float: left;
+}
