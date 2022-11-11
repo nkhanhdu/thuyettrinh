@@ -1,0 +1,32 @@
+/* about us */
+
+#h2a,#h2b{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    display: flex;
+    align-items: center;
+}
+#about1,#about3,#about4,#about5,#about6{
+    
+    text-align: inherit;
+    background: #D9D9D9;
+    border-radius: 10px;
+}
+#h3a,#h3b,#h3c,#h3d{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+}
+.f1,.f2,.f3{
+    float: left;
+}
+.clear{
+    clear: both;
+}
