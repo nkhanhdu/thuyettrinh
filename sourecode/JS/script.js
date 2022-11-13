@@ -81,7 +81,7 @@ var app = angular.module("myProject", ["ngRoute"]);
         {
             $http.get("./JSON/product.json").then(function(response)
             {
-                $rootScope.list = response.data.productList;
+                $rootScope.plist = response.data.productList;
                 $rootScope.clickProduct=function(event){
                     console.log(event)
                 }
