@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="/sourecode/CSS/css_1.css">
+
+<div class="col-sm-4 " >
+                
+                    <div class="card border-0 bg-light mb-2">
+                        <div class="card-body">
+                            <img src="../Image/{{selectProduct.img}}" alt="" width="100%" height="280vw">
+                            <div class="card-info">
+                                <div class="product-name">{{selectProduct.name}}</div>
+                                <div class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <div class="price">
+                                    <div class="price-after">{{selectProduct.price}}</div>
+                                    <div class="price-before">$21.95</div>
+                                    <div class="price-discount">9% OFF</div>
+                                </div>
+                                <br>
+                
+                            </div>
+                        </div>
+                    </div>
+                
+                
+                <div class="buy-action">
+                    <div class="wrapper">
+                        <div class="decrement">
+                            <button class="dec">-</button>
+                        </div>
+                        <div class="quantity">
+                            <input type="number" id="qty" class="qty" value="1">
+                        </div>
+                        <div class="increment">
+                            <button class="inc">+</button>
+                        </div>
+                    </div>
+                    <div class="add-to-cart">
+                        <button type="submit" ng-click="addcart()">Add to cart</button>
+                    </div>
+                </div>
+                </div>
+
+<script src="/sourecode/JS/script.js"></script>
