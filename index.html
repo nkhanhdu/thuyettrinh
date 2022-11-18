@@ -1,752 +1,416 @@
-<!-- Carousel/Slider -->
-<!-- !bootstrap alert -->
-<div class="alert alert-success alert-dismissible fade show" ng-show="confirmAlert">
-    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-    <strong>Success!</strong> Your order has been taken.
-</div>
-<div id="slider" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#slider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"><div class="indicator"></div></button>
-        <button type="button" data-bs-target="#slider" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#slider" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="d-block w-100" src="../Image/slider-3.jpg" alt="First slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="../Image/slider-1.jpeg" alt="Second slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="../Image/slider-4.jpeg" alt="Third slide">
-        </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
-        <span aria-hidden="true"><div class="btn-circle"><i class="fa-solid fa-chevron-left" id="btn-prev"></i></div></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
-        <span aria-hidden="true"><div class="btn-circle"><i class="fa-solid fa-chevron-right" id="btn-next"></i></div></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaruDryFruit | Nutritious Fruits and Nuts</title>
+    <link rel="icon" type="image/x-icon" href="../Image/grape_bigger.png"> <!--icon tren tab bar-->
+    <link rel="stylesheet" href="CSS/css_1.css"> <!--CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"> <!--BOOTSTRAP 5-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script> <!--BOOTSTRAP 5-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Google Fonts-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
-<section class="product">
-    <div class="container">
-        <div class="row py-5">
-            <div class="col-lg-12 m-auto text-center">
-                <h1>Top Selling</h1><hr class="product-title">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"/> <!--font awesome/icon-->
+</head>
+<body ng-app="myProject">
+    <header>
+        <div class="offer-container">
+            <div class="discount-name">Use code: HAPPYMon & <span class="discount-value"> GET 30% OFF</span></div>
+        </div>
+        <div class="main-header-container">
+            <div class="logo-container">
+                <a href="#/">
+                    <img src="../Image/logo.png" alt="logo" id="logo" height="55px" width="auto">
+                    <div id="logo-name"><span style="font-weight: 700">MARU</span> Dry Fruits</div>
+                </a>
             </div>
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="card border-0 bg-light mb-2">
-                        <div class="card-body">
-                            <img src="../Image/seed1.jpg" alt="seed1" width="100%">
-                            <div class="card-info">
-                                <div class="product-name">Watermelon Seeds - 400gr</div>
-                                <div class="rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star-half-stroke"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <div class="price">
-                                    <div class="price-after">$19.95</div>
-                                    <div class="price-before">$21.95</div>
-                                    <div class="price-discount">9% OFF</div>
-                                </div>
-                                <br>
-                                <div class="buy-action">
-                                    <div class="wrapper">
-                                        <div class="decrement">
-                                            <button class="dec">-</button>
-                                        </div>
-                                        <div class="quantity">
-                                            <input type="number" id="qty" class="qty" value="1">
-                                        </div>
-                                        <div class="increment">
-                                            <button class="inc">+</button>
-                                        </div>
-                                    </div>
-                                    <div class="add-to-cart">
-                                        <button>Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <form class="d-flex">
+                <input class="px-2 search" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn0" type="submit"><i class="fa-solid fa-magnifying-glass" id="search"></i></button>
+            </form>
+            <div class="icon">
+                <div class="heart">
+                    <a href="#!wishlist"><i class="fa-solid fa-heart" id="heart"></i></a>
                 </div>
-                <div class="col-lg-3">
-                    <div class="card border-0 bg-light mb-2">
-                        <div class="card-body">
-                            <img src="../Image/seed1.jpg" alt="seed1" width="100%">
-                            <div class="card-info">
-                                <div class="product-name">Watermelon Seeds - 400gr</div>
-                                <div class="rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star-half-stroke"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <div class="price">
-                                    <div class="price-after">$19.95</div>
-                                    <div class="price-before">$21.95</div>
-                                    <div class="price-discount">9% OFF</div>
-                                </div>
-                                <br>
-                                <div class="buy-action">
-                                    <div class="wrapper">
-                                        <div class="decrement">
-                                            <button class="dec">-</button>
-                                        </div>
-                                        <div class="quantity">
-                                            <input type="number" id="qty" class="qty" value="1">
-                                        </div>
-                                        <div class="increment">
-                                            <button class="inc">+</button>
-                                        </div>
-                                    </div>
-                                    <div class="add-to-cart">
-                                        <button>Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="cart">
+                    <a href="#!cart"><i class="fa-solid fa-basket-shopping" id="cart"></i></a>
+                    <!-- <div class="dropdown-content">
+                      <a href="#">Link 1</a>
+                      <a href="#">Link 2</a>
+                      <a href="#">Link 3</a>
+                    </div> -->
                 </div>
-                <div class="col-lg-3">
-                    <div class="card border-0 bg-light mb-2">
-                        <div class="card-body">
-                            <img src="../Image/seed1.jpg" alt="seed1" width="100%">
-                            <div class="card-info">
-                                <div class="product-name">Watermelon Seeds - 400gr</div>
-                                <div class="rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star-half-stroke"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <div class="price">
-                                    <div class="price-after">$19.95</div>
-                                    <div class="price-before">$21.95</div>
-                                    <div class="price-discount">9% OFF</div>
-                                </div>
-                                <br>
-                                <div class="buy-action">
-                                    <div class="wrapper">
-                                        <div class="decrement">
-                                            <button class="dec">-</button>
-                                        </div>
-                                        <div class="quantity">
-                                            <input type="number" id="qty" class="qty" value="1">
-                                        </div>
-                                        <div class="increment">
-                                            <button class="inc">+</button>
-                                        </div>
-                                    </div>
-                                    <div class="add-to-cart">
-                                        <button>Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="user">
+                    <a href="#!signin"><i class="fa-solid fa-user" id="user"></i></a>
                 </div>
-                <div class="col-lg-3">
-                    <div class="card border-0 bg-light mb-2">
-                        <div class="card-body">
-                            <img src="../Image/seed1.jpg" alt="seed1" width="100%">
-                            <div class="card-info">
-                                <div class="product-name">Watermelon Seeds - 400gr</div>
-                                <div class="rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star-half-stroke"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <div class="price">
-                                    <div class="price-after">$19.95</div>
-                                    <div class="price-before">$21.95</div>
-                                    <div class="price-discount">9% OFF</div>
-                                </div>
-                                <br>
-                                <div class="buy-action">
-                                    <div class="wrapper">
-                                        <div class="decrement">
-                                            <button class="dec">-</button>
-                                        </div>
-                                        <div class="quantity">
-                                            <input type="number" id="qty" class="qty" value="1">
-                                        </div>
-                                        <div class="increment">
-                                            <button class="inc">+</button>
-                                        </div>
-                                    </div>
-                                    <div class="add-to-cart">
-                                        <button>Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-			</div>
+            </div>
         </div>
-    </div>
+    </header>
+    <nav>
+        <ul class="nav-links" id="nav-bar">
+            <li><a href="#/">HOME</a></li>
+            <li><a href="#!products">PRODUCTS<i class="fa-solid fa-chevron-down"></i></a></li>
+            <li><a href="#!offers">OFFERS</a></li>
+            <li><a href="#!about">ABOUT</a></li>
+            <li><a href="#!contact">CONTACT</a></li>
+        </ul>
+    </nav>
+    <div ng-view></div>
+    <!-- footer -->
+    <footer>
+        <div class="navbar">
+            <div class="logo-container">
+                <a href="#/">
+                    <img src="../Image/logo.png" alt="logo" id="logo" height="55px" width="auto">
+                    <div id="logo-name2"><span style="font-weight: 700">MARU</span> Dry Fruits</div>
+                </a>
+            </div>
+            <div class="nav-right">
+                <div class="sub-scri">
+                    <p>Subscribe to Newsletter</p>
+                    <input class="px-2 search" type="text" placeholder="Email" aria-label="Email">
+                    <button class="btn1" type="submit"><i class="fa-solid fa-arrow-right" id="email"></i></button>
+                </div>
+            </div>
+            <section class="fot-dcm">
+                <div class="container">
+                    <div class="row">
+                      <div class="col-xl-2 col-lg-4 col-md-6">
+                        <div class="about">
+                          <h4>About Us</h4>
+                            <a href="#"> History</a>
+                            <a href="#!dissclaimer"> Dissclaimer</a>
+                        </div>
+                      </div>
+                      <div class="col-xl-2 col-lg-2 col-md-6">
+                        <div class="">
+                          <h4>Contact</h4>
+                          <ul class="list-unstyled">
+                            <li>
+                              <a href="#" class="text-decoration-none">Contact Us</a>
+                            </li>
+                            <div class="fb">
+                                <ul class="d-flex gap-1 list-unstyled">
+                                  <li><a href="#"><i class="bi bi-facebook" style="font-size: 2rem;"></i></a></li>
+                                  <li><a href="#"><i class="bi bi-twitter" style="font-size: 2rem;"></i></a></li>
+                                  <li><a href="#"><i class="bi bi-instagram" style="font-size: 2rem;"></i></a></li>
+                                </ul>
+                            </div>
+                            
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-xl-3 col-lg-3 col-md-6">
+                        <div>
+                          <h4>Head Office</h4>
+                          <ul class="list-unstyled">
+                            <li>
+                              <a href="#" class="text-decoration-none"><i class="fa-solid fa-location-dot"></i> 590 Cach mang thang 8,Ward 11,Distric 3,Ho Chi Minh City</a>
+                            </li>
+                            <li>
+                              <a href="#" style="text-decoration-line: underline;"><i class="fa-regular fa-envelope"></i> support@marudryfruit.com.vn</a>
+                            </li>
+                            <li>
+                              <a href="tel:(+84)973406053" class="text-decoration-none"><i class="fa-solid fa-phone"></i> (84.28) 3863 3594 - (84.28) 3863 4270</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-xl-3 col-lg-3 col-md-6">
+                        <div>
+                          <h4>Hanoi Branch</h4>
+                          <ul class="list-unstyled">
+                            <li>
+                                <a href="#" class="text-decoration-none"><i class="fa-solid fa-location-dot"></i> 56/2 Chua Lang, Hoan Kiem District, Ha Noi</a>
+                              </li>
+                              <li>
+                                <a href="#" style="text-decoration-line: underline;"><i class="fa-regular fa-envelope"></i> support@marudryfruit.com.vn</a>
+                              </li>
+                              <li>
+                                <a href="tel:(+84)973406053" class="text-decoration-none"><i class="fa-solid fa-phone"></i> (84.28) 3863 3594 - (84.28) 3863 4270</a>
+                              </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+                <div class="footer">Copyright T1.2208.M0-Group 2 &copy; MaruDryFruit. All rights reserved</div>
 
+            </section>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> <!--jQuery-->
+    <script src="JS/script.js"></script>
+	<script>
+		var app = angular.module("myProject", ["ngRoute"]);
 
+        app.config(function($routeProvider)  
+        {
+            $routeProvider
+            .when("/",{
+                templateUrl: "home.html"
+                // controller: "homeController"
+            })
+            .when("/products",{
+                templateUrl: "products.html",
+                controller: "productController"
+            })
+            .when("/productdetail",{
+                templateUrl: "productdetail.html",
+                controller: "detailController"
+            })
+
+            .when("/offers",{
+                templateUrl: "offers.html",
+                controller: "offersController"
+            })
+            .when("/about",{
+                templateUrl: "about.html"
+            })
+            .when("/contact",{
+                templateUrl: "contact.html"
+            })
+            .when("/wishlist",{
+                templateUrl: "wishlist.html",
+                controller:"wishlistController"
+            })
+            .when("/cart",{
+                templateUrl: "cart.html",
+                controller: "cartController"
+            
+            })
+            .when("/checkout",{
+                templateUrl: "checkout.html",
+                controller: "checkoutController"
+            })
+            .when("/signin",{
+                templateUrl: "signin.html",
+                controller: "signinController"
+            })
+            .when("/signup",{
+                templateUrl: "signup.html",
+                controller: "signupController"
+            })
+            .when("/dissclaimer",{
+                templateUrl: "dissclaimer.html"
+            })
+        });
+
+        window.onscroll = function() {myFunction()};
+
+        var navbar = document.getElementById("nav-bar");
+        var sticky = navbar.offsetTop;
+        // var filter = document.getElementsById("filter");
+        // var filter-sticky = filter.offsetTop;
+        // var filter = $('#filter');
+        // var distance_from_top = document.body.scrollTop;
+        // filter.onclick(function()
+        // {
+        //     alert("hello Dan");
+        // });
+
+        function myFunction() 
+        {
+            if (window.pageYOffset >= sticky) 
+            {
+                navbar.classList.add("sticky")
+            } 
+            else 
+            {
+                navbar.classList.remove("sticky");
+            }
+        }
+
+        app.run(function($rootScope, $http)
+        {
+            $rootScope.confirmAlert;
+            $http.get("./JSON/user.json").then(function(response)
+            {
+                $rootScope.list = response.data.userList;
+            })
+            $http.get("./JSON/offers.json").then(function(rsp)
+            {
+                $rootScope.offers = rsp.data.offersList;
+            })
+            $http.get("./JSON/product.json").then(function(response)
+            {
+                $rootScope.plist = response.data.productList;   
+            })
+        });
+        
+        app.filter("phoneFilter", function()
+        {
+            return function(x)
+            {
+                var tel = x.slice(0,4) + ' ' + x.slice(4,7) + ' ' + x.slice(7,10);
+                return tel;
+            }
+        })
+
+        app.controller("offersController", function($scope)
+        {
+            $scope.leftScroll = function()
+            {
+                document.querySelector('div.product-container').scrollLeft -= 500;
+            }
+            $scope.rightScroll = function()
+            {
+                document.querySelector('div.product-container').scrollLeft += 500;
+            }
+        })
+
+        app.controller("signinController", function($scope, $location, $rootScope)
+        {
+            $scope.btn2 = function(path)
+            {
+                for (var i = 0; i<$scope.list.length; i++)
+                {
+                    if (($scope.email == $scope.list[i].email) && ($scope.pass == $scope.list[i].pass))
+                    {
+                        $location.path("/");
+                        return;
+                    }
+                    else if (i == ($scope.list.length-1))
+                    {
+                        alert("Wrong account");
+                        return;
+                    }
+                }
+                
+            }
+        })
+        app.controller("checkoutController", function($scope, $rootScope, $location)
+        {
+            $scope.allowUpdate = true;
+            $scope.hideAndShow = false;
+            $scope.showCredit = false;
+            $scope.showNewAlert = false;
+            $scope.showAddress2 = false;
+            $scope.confirmAbled = false;
+            $scope.cardShow;
+
+            $scope.confirmFinish = function(path)
+            {
+                if ($scope.shipping == undefined)
+                {
+                    $("html, body").animate({ scrollTop: 0 }, 200);
+                    $scope.shippingAlert = true;
+                    return false;
+                }
+                else if ($scope.payment == undefined)
+                {
+                    $("html, body").animate({ scrollTop: 0 }, 200);
+                    $scope.shippingAlert = false;
+                    $scope.paymentAlert = true;
+                    return false;
+                }
+                else if ($scope.cardShow == true)
+                {
+                    $scope.shippingAlert = false;
+                    $scope.paymentAlert = false;
+                    $("html, body").animate({ scrollTop: 0 }, 200);
+                    return false;
+                }
+                else if ($scope.confirmAbled  == false)
+                {
+                    $scope.shippingAlert = false;
+                    $scope.paymentAlert = false;
+                    $scope.disclaimerAlert = true;
+                    return false;
+                }
+                $rootScope.confirmAlert = true;
+                $location.path("/");
+                $("html, body").animate({ scrollTop: 0 }, 200);
+                return;
+            }
+        })
+
+        
+
+        app.controller("detailController",function($scope,$http)
+        {
+            
+            $scope.myShow=true;
+            $scope.myreview=true;
+
+            $scope.btn5=function(){
+                $scope.myShow= !$scope.myShow;
+            }
+            $scope.btn7=function(){
+                $scope.myreview= !$scope.myreview;
+            }
+        })
+        app.controller("productController", function($rootScope,$scope)
+        {
+            $scope.clickProduct=function(event){
+                $rootScope.selectProduct=event
+            }
+            $("input[type=checkbox]").click(function () {
+                let cats = $(".chk-cake:checked").map(function () { return $(this).val() }).toArray().toString();
+                
+                let subdata = (cats.length==0)?data: data.filter(item => cats.search(item.cat) >= 0);
+                
+                displayImages(subdata);
+            
+            });
+
+        })
+
+        app.controller("cartController", function($rootScope,$scope)
+        {
+            // $scope.addcart=function(event){
+            //     $rootScope.selectedProduct=event
+            // }
+        })
+
+        app.controller("signupController", function($scope,$location)
+        {
+            $scope.btn3 = function(path){
+                //tao 1 doi tuong JSON, noi dung gia tri cac o input o form
+                var newuser = {"name": $scope.name,
+                 "email": $scope.email,
+                  "pass": $scope.pass,
+                "telephone": $scope.telephone,
+                "address": $scope.address};
+
+                //them vao danh sach bang phuong thuc push()
+                $scope.list.push(newuser);
+                alert("Add new user successfully");
+                $location.path("/signin");
+            }
+        })
+        app.controller("wishlistController", function($scope,$rootScope)
+        {
+
+        })
+        
+        // Close the dropdown menu if the user clicks outside of it
+        //lap trinh su kien click chon loai san pham
+// $("input[type=checkbox]").click(function () {
+
+//     // var cats =
+//     //     $('input:checkbox[name="cat"]:checked')
+//     //         .map(function () {
+//     //             return $(this).val();
+//     //         }).get();
+
+//     // cats = cats.toString().trim();
+//     //alert("checkbox");
+
+//     let cats = $(".chk-cake:checked").map(function () { return $(this).val() }).toArray().toString();
     
+//     let subdata = (cats.length==0)?data: data.filter(item => cats.search(item.cat) >= 0);
+    
+//     displayImages(subdata);
 
-      <!-- !att2 -->
-    <div class="col-lg-12 m-auto text-center">
-        <h1>New Arrivals</h1><hr class="product-title">
-    </div>
-    <div class="products-container">
-      <div id="card-slider" class="carousel carousel-dark slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="row justify-content-center">
-                <div class="col-lg-3">
-                    <div class="card border-0 bg-light mb-2">
-                        <div class="card-body">
-                            <img src="../Image/seed1.jpg" alt="seed1" width="100%" height="280vw">
-                            <div class="card-info">
-                                <div class="product-name">Watermelon Seeds - 400gr</div>
-                                <div class="rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star-half-stroke"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <div class="price">
-                                    <div class="price-after">$19.95</div>
-                                    <div class="price-before">$21.95</div>
-                                    <div class="price-discount">9% OFF</div>
-                                </div>
-                                <br>
-                                <div class="buy-action">
-                                    <div class="row justify-content-center">
-                                        <div class="col-lg-5 col-lg-offset-3">
-                                            <div class="wrapper">
-                                                <div class="decrement">
-                                                    <button class="dec">-</button>
-                                                </div>
-                                                <div class="quantity">
-                                                    <input type="number" id="qty" class="qty" value="1">
-                                                </div>
-                                                <div class="increment">
-                                                    <button class="inc">+</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-7">
-                                            <div class="add-to-cart">
-                                                <button>Add to cart</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="card border-0 bg-light mb-2">
-                        <div class="card-body">
-                            <img src="../Image/seed1.jpg" alt="seed1" width="100%" height="280vw">
-                            <div class="card-info">
-                                <div class="product-name">Watermelon Seeds - 400gr</div>
-                                <div class="rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star-half-stroke"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <div class="price">
-                                    <div class="price-after">$19.95</div>
-                                    <div class="price-before">$21.95</div>
-                                    <div class="price-discount">9% OFF</div>
-                                </div>
-                                <br>
-                                <div class="buy-action">
-                                    <div class="wrapper">
-                                        <div class="decrement">
-                                            <button class="dec">-</button>
-                                        </div>
-                                        <div class="quantity">
-                                            <input type="number" id="qty" class="qty" value="1">
-                                        </div>
-                                        <div class="increment">
-                                            <button class="inc">+</button>
-                                        </div>
-                                    </div>
-                                    <div class="add-to-cart">
-                                        <button>Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="card border-0 bg-light mb-2">
-                        <div class="card-body">
-                            <img src="../Image/seed1.jpg" alt="seed1" width="100%" height="280vw">
-                            <div class="card-info">
-                                <div class="product-name">Watermelon Seeds - 400gr</div>
-                                <div class="rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star-half-stroke"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <div class="price">
-                                    <div class="price-after">$19.95</div>
-                                    <div class="price-before">$21.95</div>
-                                    <div class="price-discount">9% OFF</div>
-                                </div>
-                                <br>
-                                <div class="buy-action">
-                                    <div class="wrapper">
-                                        <div class="decrement">
-                                            <button class="dec">-</button>
-                                        </div>
-                                        <div class="quantity">
-                                            <input type="number" id="qty" class="qty" value="1">
-                                        </div>
-                                        <div class="increment">
-                                            <button class="inc">+</button>
-                                        </div>
-                                    </div>
-                                    <div class="add-to-cart">
-                                        <button>Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="card border-0 bg-light mb-2">
-                        <div class="card-body">
-                            <img src="../Image/seed1.jpg" alt="seed1" width="100%" height="280vw">
-                            <div class="card-info">
-                                <div class="product-name">Watermelon Seeds - 400gr</div>
-                                <div class="rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star-half-stroke"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <div class="price">
-                                    <div class="price-after">$19.95</div>
-                                    <div class="price-before">$21.95</div>
-                                    <div class="price-discount">9% OFF</div>
-                                </div>
-                                <br>
-                                <div class="buy-action">
-                                    <div class="wrapper">
-                                        <div class="decrement">
-                                            <button class="dec">-</button>
-                                        </div>
-                                        <div class="quantity">
-                                            <input type="number" id="qty" class="qty" value="1">
-                                        </div>
-                                        <div class="increment">
-                                            <button class="inc">+</button>
-                                        </div>
-                                    </div>
-                                    <div class="add-to-cart">
-                                        <button>Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-			</div>
-          </div>
-          <div class="carousel-item">
-            <div class="row justify-content-center">
-                <div class="col-lg-3">
-                    <div class="card border-0 bg-light mb-2">
-                        <div class="card-body">
-                            <img src="../Image/walnut.jpg" alt="seed1" width="100%" height="280vw">
-                            <div class="card-info">
-                                <div class="product-name">Watermelon Seeds - 400gr</div>
-                                <div class="rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star-half-stroke"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <div class="price">
-                                    <div class="price-after">$19.95</div>
-                                    <div class="price-before">$21.95</div>
-                                    <div class="price-discount">9% OFF</div>
-                                </div>
-                                <br>
-                                <div class="buy-action">
-                                    <div class="row justify-content-center">
-                                        <div class="col-lg-5 col-lg-offset-3">
-                                            <div class="wrapper">
-                                                <div class="decrement">
-                                                    <button class="dec">-</button>
-                                                </div>
-                                                <div class="quantity">
-                                                    <input type="number" id="qty" class="qty" value="1">
-                                                </div>
-                                                <div class="increment">
-                                                    <button class="inc">+</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-7">
-                                            <div class="add-to-cart">
-                                                <button>Add to cart</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="card border-0 bg-light mb-2">
-                        <div class="card-body">
-                            <img src="../Image/walnut.jpg" alt="seed1" width="100%" height="280vw">
-                            <div class="card-info">
-                                <div class="product-name">Watermelon Seeds - 400gr</div>
-                                <div class="rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star-half-stroke"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <div class="price">
-                                    <div class="price-after">$19.95</div>
-                                    <div class="price-before">$21.95</div>
-                                    <div class="price-discount">9% OFF</div>
-                                </div>
-                                <br>
-                                <div class="buy-action">
-                                    <div class="wrapper">
-                                        <div class="decrement">
-                                            <button class="dec">-</button>
-                                        </div>
-                                        <div class="quantity">
-                                            <input type="number" id="qty" class="qty" value="1">
-                                        </div>
-                                        <div class="increment">
-                                            <button class="inc">+</button>
-                                        </div>
-                                    </div>
-                                    <div class="add-to-cart">
-                                        <button>Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="card border-0 bg-light mb-2">
-                        <div class="card-body">
-                            <img src="../Image/walnut.jpg" alt="seed1" width="100%" height="280vw">
-                            <div class="card-info">
-                                <div class="product-name">Watermelon Seeds - 400gr</div>
-                                <div class="rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star-half-stroke"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <div class="price">
-                                    <div class="price-after">$19.95</div>
-                                    <div class="price-before">$21.95</div>
-                                    <div class="price-discount">9% OFF</div>
-                                </div>
-                                <br>
-                                <div class="buy-action">
-                                    <div class="wrapper">
-                                        <div class="decrement">
-                                            <button class="dec">-</button>
-                                        </div>
-                                        <div class="quantity">
-                                            <input type="number" id="qty" class="qty" value="1">
-                                        </div>
-                                        <div class="increment">
-                                            <button class="inc">+</button>
-                                        </div>
-                                    </div>
-                                    <div class="add-to-cart">
-                                        <button>Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="card border-0 bg-light mb-2">
-                        <div class="card-body">
-                            <img src="../Image/walnut.jpg" alt="seed1" width="100%" height="280vw">
-                            <div class="card-info">
-                                <div class="product-name">Watermelon Seeds - 400gr</div>
-                                <div class="rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star-half-stroke"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <div class="price">
-                                    <div class="price-after">$19.95</div>
-                                    <div class="price-before">$21.95</div>
-                                    <div class="price-discount">9% OFF</div>
-                                </div>
-                                <br>
-                                <div class="buy-action">
-                                    <div class="wrapper">
-                                        <div class="decrement">
-                                            <button class="dec">-</button>
-                                        </div>
-                                        <div class="quantity">
-                                            <input type="number" id="qty" class="qty" value="1">
-                                        </div>
-                                        <div class="increment">
-                                            <button class="inc">+</button>
-                                        </div>
-                                    </div>
-                                    <div class="add-to-cart">
-                                        <button>Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-			</div>
-          </div>
-          <div class="carousel-item">
-            <div class="row justify-content-center">
-                <div class="col-lg-3">
-                    <div class="card border-0 bg-light mb-2">
-                        <div class="card-body">
-                            <img src="../Image/walnut.jpg" alt="seed1" width="100%" height="280vw">
-                            <div class="card-info">
-                                <div class="product-name">Watermelon Seeds - 400gr</div>
-                                <div class="rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star-half-stroke"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <div class="price">
-                                    <div class="price-after">$19.95</div>
-                                    <div class="price-before">$21.95</div>
-                                    <div class="price-discount">9% OFF</div>
-                                </div>
-                                <br>
-                                <div class="buy-action">
-                                    <div class="row justify-content-center">
-                                        <div class="col-lg-5 col-lg-offset-3">
-                                            <div class="wrapper">
-                                                <div class="decrement">
-                                                    <button class="dec">-</button>
-                                                </div>
-                                                <div class="quantity">
-                                                    <input type="number" id="qty" class="qty" value="1">
-                                                </div>
-                                                <div class="increment">
-                                                    <button class="inc">+</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-7">
-                                            <div class="add-to-cart">
-                                                <button>Add to cart</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="card border-0 bg-light mb-2">
-                        <div class="card-body">
-                            <img src="../Image/walnut.jpg" alt="seed1" width="100%" height="280vw">
-                            <div class="card-info">
-                                <div class="product-name">Watermelon Seeds - 400gr</div>
-                                <div class="rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star-half-stroke"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <div class="price">
-                                    <div class="price-after">$19.95</div>
-                                    <div class="price-before">$21.95</div>
-                                    <div class="price-discount">9% OFF</div>
-                                </div>
-                                <br>
-                                <div class="buy-action">
-                                    <div class="wrapper">
-                                        <div class="decrement">
-                                            <button class="dec">-</button>
-                                        </div>
-                                        <div class="quantity">
-                                            <input type="number" id="qty" class="qty" value="1">
-                                        </div>
-                                        <div class="increment">
-                                            <button class="inc">+</button>
-                                        </div>
-                                    </div>
-                                    <div class="add-to-cart">
-                                        <button>Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="card border-0 bg-light mb-2">
-                        <div class="card-body">
-                            <img src="../Image/walnut.jpg" alt="seed1" width="100%" height="280vw">
-                            <div class="card-info">
-                                <div class="product-name">Watermelon Seeds - 400gr</div>
-                                <div class="rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star-half-stroke"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <div class="price">
-                                    <div class="price-after">$19.95</div>
-                                    <div class="price-before">$21.95</div>
-                                    <div class="price-discount">9% OFF</div>
-                                </div>
-                                <br>
-                                <div class="buy-action">
-                                    <div class="wrapper">
-                                        <div class="decrement">
-                                            <button class="dec">-</button>
-                                        </div>
-                                        <div class="quantity">
-                                            <input type="number" id="qty" class="qty" value="1">
-                                        </div>
-                                        <div class="increment">
-                                            <button class="inc">+</button>
-                                        </div>
-                                    </div>
-                                    <div class="add-to-cart">
-                                        <button>Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="col-lg-3">
-                    <div class="card border-0 bg-light mb-2">
-                        <div class="card-body">
-                            <img src="../Image/walnut.jpg" alt="seed1" width="100%" height="280vw">
-                            <div class="card-info">
-                                <div class="product-name">Watermelon Seeds - 400gr</div>
-                                <div class="rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star-half-stroke"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <div class="price">
-                                    <div class="price-after">$19.95</div>
-                                    <div class="price-before">$21.95</div>
-                                    <div class="price-discount">9% OFF</div>
-                                </div>
-                                <br>
-                                <div class="buy-action">
-                                    <div class="wrapper">
-                                        <div class="decrement">
-                                            <button class="dec">-</button>
-                                        </div>
-                                        <div class="quantity">
-                                            <input type="number" id="qty" class="qty" value="1">
-                                        </div>
-                                        <div class="increment">
-                                            <button class="inc">+</button>
-                                        </div>
-                                    </div>
-                                    <div class="add-to-cart">
-                                        <button>Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-			</div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#card-slider" data-bs-slide="prev">
-            <span aria-hidden="true"><div class="btn-circle"><i class="fa-solid fa-chevron-left" id="btn-prev"></i></div></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#card-slider" data-bs-slide="next">
-            <span aria-hidden="true"><div class="btn-circle"><i class="fa-solid fa-chevron-right" id="btn-next"></i></div></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
-</section>
-<br>
-<section class="category">
-    <div id="category-title">Shop Categories</div>
-    <div class="category-container">
-        <div class="row py-3 justify-content-center align-items-end">
-            <div class="col-lg-3">
-                <div class="category-wrapper" style="width: 18rem;">
-                    <img src="../Image/dryfruits.png" width="100%" alt="dryfruits">
-                    <a href="#" class="btn btn-primary">Dry Fruits</a>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="category-wrapper" style="width: 18rem;">
-                    <img src="../Image/nuts.png" width="100%" alt="nuts">
-                    <a href="#" class="btn btn-primary">Nuts</a>
-                </div>
-            </div>
-        </div>
-        <div class="row py-3 justify-content-center align-items-end">
-            <div class="col-lg-3">
-                <div class="category-wrapper" style="width: 18rem;">
-                    <img src="../Image/seeds.png" width="100%" alt="seeds">
-                    <a href="#" class="btn btn-primary">Seeds</a>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="category-wrapper" style="width: 18rem;">
-                    <img src="../Image/combopacks.png" width="100%" alt="combopacks">
-                    <a href="#" class="btn btn-primary">Combo Packs</a>
-                </div>
-            </div>
-        </div>
-</section>
+// });
+
+        
+	</script>
+</body>
+</html>
