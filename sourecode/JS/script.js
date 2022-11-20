@@ -4,51 +4,51 @@ var app = angular.module("myProject", ["ngRoute"]);
         {
             $routeProvider
             .when("/",{
-                templateUrl: "./home.html"
+                templateUrl: "./sourcecode/home.html"
                 // controller: "homeController"
             })
             .when("/products",{
-                templateUrl: "./products.html",
+                templateUrl: "./sourcecode/products.html",
                 controller: "productController"
             })
             .when("/productdetail",{
-                templateUrl: "./productdetail.html",
+                templateUrl: "./sourcecode/productdetail.html",
                 controller: "detailController"
             })
 
             .when("/offers",{
-                templateUrl: "./offers.html",
+                templateUrl: "./sourcecode/offers.html",
                 controller: "offersController"
             })
             .when("/about",{
-                templateUrl: "./about.html"
+                templateUrl: "./sourcecode/about.html"
             })
             .when("/contact",{
-                templateUrl: "./contact.html"
+                templateUrl: "./sourcecode/contact.html"
             })
             .when("/wishlist",{
-                templateUrl: "./wishlist.html",
+                templateUrl: "./sourcecode/wishlist.html",
                 controller:"wishlistController"
             })
             .when("/cart",{
-                templateUrl: "./cart.html",
+                templateUrl: "./sourcecode/cart.html",
                 controller: "cartController"
             
             })
             .when("/checkout",{
-                templateUrl: "./checkout.html",
+                templateUrl: "./sourcecode/checkout.html",
                 controller: "checkoutController"
             })
             .when("/signin",{
-                templateUrl: "./signin.html",
+                templateUrl: "./sourcecode/signin.html",
                 controller: "signinController"
             })
             .when("/signup",{
-                templateUrl: "./signup.html",
+                templateUrl: "./sourcecode/signup.html",
                 controller: "signupController"
             })
             .when("/dissclaimer",{
-                templateUrl: "./dissclaimer.html"
+                templateUrl: "./sourcecode/dissclaimer.html"
             })
         });
 
