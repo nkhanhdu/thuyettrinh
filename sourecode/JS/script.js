@@ -4,11 +4,11 @@ var app = angular.module("myProject", ["ngRoute"]);
         {
             $routeProvider
             .when("/",{
-                templateUrl: "./sourcecode/home.html"
+                templateUrl: "../sourcecode/home.html"
                 // controller: "homeController"
             })
             .when("/products",{
-                templateUrl: "./sourcecode/products.html",
+                templateUrl: "../sourcecode/products.html",
                 controller: "productController"
             })
             .when("/productdetail",{
