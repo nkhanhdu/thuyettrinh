@@ -88,7 +88,7 @@ var app = angular.module("myProject", ["ngRoute"]);
             {
                 $rootScope.offers = rsp.data.offersList;
             })
-            $http.get("../JSON/product.json").then(function(response)
+            $http.get("./JSON/product.json").then(function(response)
             {
                 $rootScope.plist = response.data.productList;   
             })
