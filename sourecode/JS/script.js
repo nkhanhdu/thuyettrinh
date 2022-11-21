@@ -80,15 +80,15 @@ var app = angular.module("myProject", ["ngRoute"]);
         app.run(function($rootScope, $http)
         {
             $rootScope.confirmAlert;
-            $http.get("./JSON/user.json").then(function(response)
+            $http.get("./sourcecode/JSON/user.json").then(function(response)
             {
                 $rootScope.list = response.data.userList;
             })
-            $http.get("./JSON/offers.json").then(function(rsp)
+            $http.get("./sourcecode/JSON/offers.json").then(function(rsp)
             {
                 $rootScope.offers = rsp.data.offersList;
             })
-            $http.get("./JSON/product.json").then(function(response)
+            $http.get("./sourcecode/JSON/product.json").then(function(response)
             {
                 $rootScope.plist = response.data.productList;   
             })
